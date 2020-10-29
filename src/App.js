@@ -15,11 +15,33 @@ class App extends React.Component {
       quizEnd: false
   }
 
+  componentDidMount() {
+    const { currentIndex } = this.state;
+    this.setState(() => {
+      return {
+        question: data[currentIndex].question,
+        ansOptions: [
+          ...data[currentIndex].incorrect,
+          data[currentIndex].correct
+        ].sort(),
+        correctAnswer: data[currentIndex].correct
+      };
+    });
+  }
+
+  
   render() {
+    const length = data.length;
     return (
       <div className="App">
         <Header />
-        <QuestionDisplay />
+        <QuestionDisplay 
+            question = {this.state.question}
+            ansOptions = {this.state.ansOptions}
+            correctAnswer = {this.state.correctAnswer}
+            currentIndex = {this.state.currentIndex}
+            length= {length}
+        />
       </div>
     );
   }
