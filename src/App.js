@@ -29,6 +29,43 @@ class App extends React.Component {
     });
   }
 
+  nextQuestionHandler = () => {
+    const { userAnswer, correctAnswer, score } = this.state;
+    if (userAnswer === correctAnswer) {
+      this.setState({
+        score: score + 1
+      });
+    }
+
+    this.setState({
+      currentIndex: this.state.currentIndex + 1,
+      userAnswer: null
+    });
+  };
+
+  componentDidUpdate(prevProps, prevState) {
+    const { currentIndex } = this.state;
+    if (this.state.currentIndex !== prevState.currentIndex) {
+      this.setState(() => {
+        return {
+          question: data[currentIndex].question,
+          ansOptions: [
+            ...data[currentIndex].incorrect,
+            data[currentIndex].correct
+          ].sort(),
+          correctAnswer: data[currentIndex].correct
+        };
+      });
+    }
+  }
+
+  finishHandler = () => {
+    if (this.state.currentIndex === data.length - 1) {
+      this.setState({
+        quizEnd: true
+      });
+    }
+  };
   
   render() {
     const length = data.length;
@@ -41,6 +78,8 @@ class App extends React.Component {
             correctAnswer = {this.state.correctAnswer}
             currentIndex = {this.state.currentIndex}
             length= {length}
+            nextQuestionHandler = {this.nextQuestionHandler}
+            finishHandler = {this.finishHandler}
         />
       </div>
     );
