@@ -33,13 +33,15 @@ class App extends React.Component {
   }
 
   nextQuestionHandler = () => {
-    const { userAnswer, correctAnswer, score } = this.state;
+    const { userAnswer, correctAnswer } = this.state;
+    console.log("userAnswer  : ", userAnswer ,"\ncorrectAnswer : ", correctAnswer)
     if (userAnswer === correctAnswer) {
       this.setState({
-        score: score + 1
-      });
+        score : this.state.score + 1 
+      }, () => console.log("score in setState..  : - ",this.state.score)
+      );
     }
-
+    console.log("score  : - ",this.state.score)
     this.setState({
       currentIndex: this.state.currentIndex + 1,
       userAnswer: null
@@ -70,6 +72,15 @@ class App extends React.Component {
   }
 
   finishHandler = () => {
+    const { userAnswer, correctAnswer } = this.state;
+    console.log("userAnswer  : ", userAnswer ,"\ncorrectAnswer : ", correctAnswer)
+    if (userAnswer === correctAnswer) {
+      this.setState({
+        score : this.state.score + 1 
+      }, () => console.log("score in setState..  : - ",this.state.score)
+      );
+    }
+    
     if (this.state.currentIndex === data.length - 1) {
       this.setState({
         quizEnd: true
