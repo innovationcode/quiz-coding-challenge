@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests App component..  matches the snapshot 1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="header"
+  >
+    Quiz Coding Challenge.
+  </h1>
+  <div
+    className="questionDisplay"
+  >
+    <span
+      style={
+        Object {
+          "fontSize": "16px",
+          "fontWeight": "400",
+        }
+      }
+    >
+      Question 1 of 21
+    </span>
+    <h3
+      className="question"
+    >
+      What was Tandem previous name?
+    </h3>
+    <p
+      style={
+        Object {
+          "paddingBottom": "6px",
+          "paddingTop": "12px",
+        }
+      }
+    >
+      The options are ...
+    </p>
+    <button
+      className="ans-option-button null"
+      onClick={[Function]}
+    >
+      Burger Shack
+    </button>
+    <button
+      className="ans-option-button null"
+      onClick={[Function]}
+    >
+      Devmynd
+    </button>
+    <button
+      className="ans-option-button null"
+      onClick={[Function]}
+    >
+      Extraordinary Humans
+    </button>
+    <button
+      className="ans-option-button null"
+      onClick={[Function]}
+    >
+      Tandem
+    </button>
+    <button
+      className="next-button"
+      onClick={[Function]}
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;

@@ -4,7 +4,7 @@ import './Header.css';
 function Header() {
       return (
             <h1 className = "header">
-                  Quiz&nbsp; Coding&nbsp; Challenge.
+                  Quiz Coding Challenge.
             </h1>
       )
 }

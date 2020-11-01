@@ -3,7 +3,7 @@ import './QuestionDisplay.css';
 
 
 function QuestionDisplay(props) {
-      console.log("Question in QuestionDisplay component  - ", props.ansOptions);
+      //console.log("Question in QuestionDisplay component  - ", props.ansOptions);
 
       return (
             <div className= 'questionDisplay'>
@@ -16,8 +16,8 @@ function QuestionDisplay(props) {
 
                   <p style = {{paddingTop: '12px', paddingBottom:'6px'}}>The options are ...</p>
                   {
-                        props.ansOptions ? (props.ansOptions.map(option => {
-                             return <button 
+                        props.ansOptions ? (props.ansOptions.map((option, index) => {
+                             return <button key = {index}
                                           // className = "ans-option-button" 
                                           className = {`ans-option-button ${props.userAnswer === option? "selected" : null}`}
                                           onClick = {() => props.checkAnswer(option)}
@@ -49,3 +49,4 @@ function QuestionDisplay(props) {
 }
 
 export default QuestionDisplay;
+

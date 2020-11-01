@@ -5,11 +5,11 @@ import  { data } from '../../questionData/questionData.js';
 function QuestionAndAnswer() {
       return (
             <div className = "question-and-answer-main">
-                  <h2>Question and answer</h2>
+                  <h2>Answers...</h2>
                   {
                         data.map((question, index) => {
                               return (
-                                    <div style = {{padding:'5px'}}>
+                                    <div key ={index} className = 'question-p-tag'>
                                           <p>{`Question ${index + 1} - ${question.question}`}</p>
                                           <p style = {{paddingTop:'2px', color:'#343434'}}>{`Correct answer  - ${question.correct}`}</p>
                                     </div>
