@@ -2,7 +2,7 @@
 
 # [Deployed App](https://quiz-code-challenge.web.app/)
 
-![Quiz App](quizApp.PNG)
+![Quiz App](src/quizApp.PNG)
 
 ---
 
