@@ -4,7 +4,7 @@ import Header from './Header.js';
 
 describe('Header component', () =>{
 
-      it('should render header text for the app', () => {
+      it('should test header div number ', () => {
             const wrapper = shallow(<Header />);
             const result = wrapper.find('.header');
             expect(result.length).toBe(1)
