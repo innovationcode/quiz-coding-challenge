@@ -47,4 +47,6 @@ src
 |-- README.md
 ```
 
--
+- You will notice every componet has three files one with`.js` includes actual code for view, `.css` includes styling and `'test.js` includes basic test for the same component.
+
+- 
