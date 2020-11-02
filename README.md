@@ -10,9 +10,31 @@
 
 - Used React to solve this challenge. 
 
+- As per requirement criteria<br> 
+   - Selecting 10 random questions from 21 provided.
+  
+   - Integrating correctAnswer with incorrect answer options provided.
+  
+   - User can see only one question with four options for answer at a time.
+  
+   - User can select only one option as a answer.
+  
+   - Showing correct answer with alert after submission of answer (later will move to UI).
+  
+   - On last question after FINISH button click, user can see final score, question and answers.  
+
 - You can see the challenge by going to this link https://quiz-code-challenge.web.app/
 
-- To run it locally on your computer <br><br> - clone this repo to your computer `git clone https://github.com/lajawanti/quiz-coding-challenge.git` <br><br>- cd into `quiz-coding-challenge` <br><br>- As `/node_modules` not pushed to github you need to run `npm install` to install all dependencies needed. <br><br>- See `/node_modules` folder created under `quiz-coding-challnge` <br><br>- Run `npm start` <br><br>- You can see [http://localhost:3000](http://localhost:3000) in the browser.
+- To run it locally on your computer <br>
+   - clone this repo to your computer `git clone https://github.com/lajawanti/quiz-coding-challenge.git` 
+   
+   - cd into `quiz-coding-challenge` 
+   
+   - As `/node_modules` not pushed to github you need to run `npm install` to install all dependencies needed. 
+   
+   - See `/node_modules` folder created under `quiz-coding-challnge` 
+   
+   - Run `npm start` <br><br>- You can see [http://localhost:3000](http://localhost:3000) in the browser.
 
 ## File structure
 
