@@ -6,6 +6,10 @@ import QuizResult from './components/quizResult/QuizResult.js';
 import QuestionAndAnswer from './components/questionAndAnswer/QuestionAndAnswer.js';
 import './App.css';
 
+// const data_other_set = (data01) => {
+//     const data =  data01.sort(() => Math.random() - Math.random()).slice(0, 10)
+//     return data;
+// }
 
 class App extends React.Component {
   state = {
@@ -18,6 +22,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    console.log("Data  :-- ", data)
     const { currentIndex } = this.state;
     this.setState(() => {
       return {
@@ -32,6 +37,7 @@ class App extends React.Component {
   }
 
   nextQuestionHandler = () => {
+    alert(`Correct Answer : - ${this.state.correctAnswer} `)
     const { userAnswer, correctAnswer } = this.state;
     //console.log("userAnswer  : ", userAnswer ,"\ncorrectAnswer : ", correctAnswer)
     if (userAnswer === correctAnswer) {

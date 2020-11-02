@@ -3,6 +3,7 @@ import './QuestionAndAnswer.css';
 import  { data } from '../../questionData/questionData.js';
 
 function QuestionAndAnswer() {
+      console.log(data)
       return (
             <div className = "question-and-answer-main">
                   <h2>Answers...</h2>

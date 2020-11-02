@@ -1,5 +1,5 @@
 //Only expressions, functions or classes are allowed as the `default` export.
-export const data = [
+const data01 = [
       {
         "question": "What was Tandem previous name?",
         "incorrect": ["Tandem", "Burger Shack", "Extraordinary Humans"],
@@ -112,3 +112,11 @@ export const data = [
       }
     ]
     
+
+    const data_other_set = (data01) => {
+      const data =  data01.sort(() => Math.random() - Math.random()).slice(0, 10)
+      return data;
+  
+    }
+
+    export const data = data_other_set(data01);
